@@ -26,6 +26,7 @@ body {
   margin: 0;
   padding: 0;
   /* box-sizing: border-box; */
+  width: 100%;
   overflow-x: hidden !important;
   color: #fff;
   background-color: var(--blackColor);
@@ -116,6 +117,12 @@ a:visited {
 }
 .heading-waleed {
   font-size: 70px;
+}
+
+@media screen and (max-width: 1400px) {
+  .heading-waleed {
+    font-size: 60px;
+  }
 }
 
 .sub-heading {
@@ -434,12 +441,11 @@ button:focus {
   flex-direction: column;
 }
 
-#home::before {
+/* #home::before {
   content: "";
   width: 40%;
   height: 70%;
   position: absolute;
-  /* right: var(--mainContainerPadding); */
   top: calc(50% - (70% * 0.5));
   z-index: 2;
   background-image: url(../images/web-development.png);
@@ -447,12 +453,60 @@ button:focus {
   background-repeat: no-repeat;
   background-size: contain;
   right: 50px;
+} */
+
+.home-align {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.home-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heading-waleed {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1300px) {
+  .home-align {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .heading-waleed {
+    flex-direction: row;
+    text-align: center;
+  }
+
+  .heading-waleed div:nth-child(1)::after {
+    content: "";
+    margin-right: 15px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .heading-waleed {
+    flex-direction: column;
+    font-size: 45px;
+    text-align: center;
+    margin-top: 30px;
+  }
 }
 
 #home .txt.container {
   position: relative;
   z-index: 4;
-  width: 70%;
+  /* width: 70%; */
   height: calc(100% - 5em);
   display: flex;
   align-items: flex-start;
@@ -1361,13 +1415,33 @@ footer .copyright {
   background-color: var(--primaryColor);
 }
 
-@media screen and (max-width: 1024px) {
-  footer .box.contact-us {
-    width: min-content;
+@media screen and (max-width: 1110px) {
+  footer .box.contact-us > iframe {
+    /* width: 300px; */
+    width: 100%;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 910px) {
+  footer .box-container .box.logo {
+    width: 4.5em !important;
+  }
+
+  footer .logo .img {
+    width: 4.5em;
+    margin: 0 !important;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  footer .contact-us .heading,
+  footer .contact-us .body,
+  footer .contact-us iframe {
+    width: 200px !important;
+  }
+}
+
+/* @media screen and (max-width: 768px) {
   footer .box:nth-child(4) {
     width: 100%;
     margin: 3em 0 0 0;
@@ -1387,9 +1461,9 @@ footer .copyright {
     justify-content: center;
     align-items: center;
   }
-}
+} */
 
-@media screen and (max-width: 650px) {
+/* @media screen and (max-width: 650px) {
   footer {
     flex-direction: column;
   }
@@ -1416,6 +1490,72 @@ footer .copyright {
 
   footer .box:nth-child(4) > .heading {
     align-self: flex-start;
+  }
+} */
+
+@media screen and (max-width: 530px) { 
+  footer .box-container {
+    flex-direction: column;
+  }
+
+  footer .box-container > div {
+    margin: 0 !important;
+    margin-top: 20px !important;
+  }
+
+  footer .box-container .pages  {
+    display: none;
+  }
+
+  footer .box-container .pages > .heading {
+    display: none;
+  }
+
+  footer .box-container .pages > .body {
+    display: flex;
+    width: 100%;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+  }
+
+  footer .box-container .pages > .body > a:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  footer .box-container .pages > .body > a {
+    margin: 0px;
+    margin-top: 5px;
+  }
+
+  footer .box-container .contact-us {
+    margin-top: 40px !important;
+  }
+
+  footer .contact-us .heading,
+  footer .contact-us .body,
+  footer .contact-us iframe {
+    width: 100% !important;
+  }
+
+  footer .box-container .box.logo {
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer .logo .img {
+    width: 10em;
+    margin: 0 !important;
+  }
+
+  footer .socials .body {
+    display: flex;
+    align-items: center;
+  }
+
+  footer .socials .body > a:not(:last-child) {
+    margin-right: 15px;
   }
 }
 
