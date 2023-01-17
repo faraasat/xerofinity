@@ -1259,6 +1259,7 @@ button:focus {
   flex-direction: column;
   background-color: transparent;
   text-align: center;
+  /* background-color: rgba(0, 0, 0, 0.4); */
 }
 
 .contact-us.section::after {
@@ -1280,7 +1281,8 @@ button:focus {
   position: fixed;
   top: 0;
   left: 0;
-  background-image: url(../images/reviews-bg.jpg);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../images/reviews-bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
