@@ -518,7 +518,7 @@ button:focus {
   position: relative;
   z-index: 4;
   /* width: 70%; */
-  height: calc(100% - 5em);
+  height: calc(100vh - 10em);
   display: flex;
   align-items: flex-start;
   justify-content: center;
