@@ -6,7 +6,7 @@
 
 ### ⚒ Project Demo:
 
-Experience the project in action by visiting our live demo: [Expense Tracker App](https://xerofinity.vercel.app/)
+Experience the project in action by visiting our live demo: [Xerofinity Live](https://xerofinity.vercel.app/)
 
 ---
 
